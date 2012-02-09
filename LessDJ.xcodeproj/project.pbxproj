@@ -80,6 +80,10 @@
 		CA341BF71467D48E0007160C /* DBList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF61467D48E0007160C /* DBList.m */; };
 		CA341BFA1467D4B30007160C /* DBFM.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF91467D4B30007160C /* DBFM.m */; };
 		CA341C0A1467E39B0007160C /* PLHttpBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341C091467E39B0007160C /* PLHttpBlock.m */; };
+		CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
+		CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
+		CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */; };
+		CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */; };
 		CA779C49146FDB9C00D085AF /* NSImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C48146FDB9C00D085AF /* NSImageCache.m */; };
 		CA779C4C146FDF6700D085AF /* PLImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C4B146FDF6700D085AF /* PLImageRequest.m */; };
 		CA779C4F146FDFF800D085AF /* NSImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C4E146FDFF800D085AF /* NSImageLoader.m */; };
@@ -182,6 +186,10 @@
 		CA341BF91467D4B30007160C /* DBFM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFM.m; sourceTree = "<group>"; };
 		CA341C081467E39A0007160C /* PLHttpBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpBlock.h; sourceTree = "<group>"; };
 		CA341C091467E39B0007160C /* PLHttpBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHttpBlock.m; sourceTree = "<group>"; };
+		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
+		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
+		CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+Stream.h"; sourceTree = "<group>"; };
+		CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+Stream.m"; sourceTree = "<group>"; };
 		CA779C47146FDB9C00D085AF /* NSImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSImageCache.h; path = NSImageAddition/NSImageCache.h; sourceTree = "<group>"; };
 		CA779C48146FDB9C00D085AF /* NSImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSImageCache.m; path = NSImageAddition/NSImageCache.m; sourceTree = "<group>"; };
 		CA779C4A146FDF6700D085AF /* PLImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageRequest.h; sourceTree = "<group>"; };
@@ -346,6 +354,15 @@
 			path = SBJSON;
 			sourceTree = "<group>";
 		};
+		CA6F552E14E408CC00A53981 /* AudioStream */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F552F14E408E800A53981 /* AudioStreamer.h */,
+				CA6F553014E408E800A53981 /* AudioStreamer.m */,
+			);
+			name = AudioStream;
+			sourceTree = "<group>";
+		};
 		CA779C45146FDB6900D085AF /* NSImageCache */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +443,7 @@
 		CA8108FE143459B500AADE2C /* LessDJ */ = {
 			isa = PBXGroup;
 			children = (
+				CA6F552E14E408CC00A53981 /* AudioStream */,
 				CA276C3414D68B2800F952DC /* AppStore */,
 				CA779C58146FEBE100D085AF /* custom slider */,
 				CA779C45146FDB6900D085AF /* NSImageCache */,
@@ -434,6 +452,8 @@
 				CA81091714345B6D00AADE2C /* DoubanFM_List */,
 				CA81090A143459B500AADE2C /* LessDJAppDelegate.h */,
 				CA81090B143459B500AADE2C /* LessDJAppDelegate.m */,
+				CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */,
+				CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */,
 				CA81090D143459B600AADE2C /* MainMenu.xib */,
 				CA8108FF143459B500AADE2C /* Supporting Files */,
 				CA341C081467E39A0007160C /* PLHttpBlock.h */,
@@ -634,6 +654,8 @@
 				CA276C0B14D689D000F952DC /* BWTexturedSlider.m in Sources */,
 				CA276C0C14D689D000F952DC /* BWTexturedSliderCell.m in Sources */,
 				CA276C0D14D689D000F952DC /* NSVIewBG.m in Sources */,
+				CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */,
+				CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +692,8 @@
 				CA779C6F146FEC4000D085AF /* BWTexturedSlider.m in Sources */,
 				CA779C70146FEC4000D085AF /* BWTexturedSliderCell.m in Sources */,
 				CA779C75146FF4BD00D085AF /* NSVIewBG.m in Sources */,
+				CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */,
+				CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

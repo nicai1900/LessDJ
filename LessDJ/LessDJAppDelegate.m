@@ -7,12 +7,15 @@
 //
 
 #import "LessDJAppDelegate.h"
-
+#import "LessDJAppDelegate+Stream.h"
 
 #import "DBFM.h"
 #import "DBList.h"
 #import "NSImageLoader.h"
 #import "NSImageView+RemoteImage.h"
+
+#import "AudioStreamer.h"
+
 
 @implementation LessDJAppDelegate
 @synthesize labelPosition;
@@ -57,8 +60,9 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    
+{    
+//    isAVPlayer = NSClassFromString(@"AVPlayer") != nil; 
+    isAVPlayer = NO;
     self.fm = [[[DBFM alloc] init] autorelease];
     fm.delegate = self;
     delayOperation = OperationNext;
@@ -70,7 +74,7 @@
     [self updateProgressTimerState:YES];
     
 #ifdef DEBUG
-    window.level = NSStatusWindowLevel;
+//    window.level = NSStatusWindowLevel;
 #endif    
 }
 
@@ -79,7 +83,7 @@
     [window orderFront:nil];
     return YES;
 }
-//- (void)application
+
 
 - (void)awakeFromNib
 {
@@ -109,6 +113,8 @@
 
 - (void)addAVPlayerNotifyCallBack
 {
+    if (!isAVPlayer) return;
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(avplayerItemDidEnded:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
@@ -127,8 +133,11 @@
 
 
 - (IBAction)playNext:(id)sender {
-    [avplayer pause];
-    PLSafeRelease(avplayer);
+    if (isAVPlayer) {
+        [avplayer pause];
+        PLSafeRelease(avplayer);
+    }
+
     
     [progressSlider setDoubleValue:0];
     
@@ -149,18 +158,22 @@
     [labelArtist setStringValue:item.artist];
     [labelAlbum  setStringValue:[NSString stringWithFormat:@"< %@ > %@",item.album,item.publicTime]];
     
-//    [labelTitle sizeToFit];
-//    [labelAlbum sizeToFit];
-//    [labelArtist sizeToFit];
     
     [viewArtwork loadImage:item.albumArtworkLargeURL
                placeholder:@"default_cover"];
     
     [window setTitle:[NSString stringWithFormat:@"%@ - %@",item.title,@"LessDJ"]];
     
-    avplayer = [[AVPlayer alloc] initWithURL:item.songURL];
-    avplayer.volume = volume;
-    [avplayer play];
+    if (isAVPlayer) {
+        avplayer = [[AVPlayer alloc] initWithURL:item.songURL];
+        avplayer.volume = volume;
+        [avplayer play];
+    }else{
+        [self createStreamer:item.songURL];
+        [streamer start];
+        [streamer setVolume:volume];
+    }
+
 
     
     [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"com.xhan.LessDJ.songchanged"
@@ -176,23 +189,20 @@
     isStatePlaying = !isStatePlaying;
     [btnPlayState setImage:[NSImage imageNamed:!isStatePlaying?@"play":@"pause"]];
     if (isStatePlaying) {
-        [avplayer play];
+        if(isAVPlayer) [avplayer play];
+        else  [streamer start];
     }else{
-        [avplayer pause];
+        if(isAVPlayer) [avplayer pause];
+        else  [streamer pause];
     }
 }
 
-- (IBAction)onBtnPlay:(id)sender {
-    [avplayer play];
-}
 
-- (IBAction)onBtnPause:(id)sender {
-    [avplayer pause];
-}
 
 - (IBAction)onVolumeChanged:(NSSlider*)sender {
     volume = [sender doubleValue];
-    [avplayer setVolume:volume];
+    if(isAVPlayer) [avplayer setVolume:volume];
+    else [streamer setVolume:volume];          
 }
 
 - (IBAction)onPopUpChanged:(NSPopUpButton*)sender {
@@ -203,11 +213,17 @@
 - (IBAction)onProgressChanged:(id)sender
 {
     float desireSeconds = [progressSlider doubleValue]*self.curItem.length/100;
-    CMTime ctime_ = avplayer.currentTime;
-    [avplayer seekToTime:CMTimeMakeWithSeconds(desireSeconds, ctime_.timescale)];
+    if (isAVPlayer) {
+        CMTime ctime_ = avplayer.currentTime;
+        [avplayer seekToTime:CMTimeMakeWithSeconds(desireSeconds, ctime_.timescale)];
+    }else{
+        [streamer seekToTime:desireSeconds];
+    }
+
 }
 
 - (IBAction)onGetLL:(id)sender {
+//#ifdef Appstore    
     [[NSWorkspace sharedWorkspace] openURL:URL(@"http://ixhan.com/lesslyrics")];
 }
 
@@ -218,26 +234,42 @@
 
 - (void)updateProgress:(NSTimer *)updatedTimer
 {
-    
-    if (avplayer.status == AVPlayerStatusReadyToPlay) {
-        CMTime ctime_ = avplayer.currentTime;
-        double duration = self.curItem.length;
-        if (CMTIME_IS_VALID(ctime_)) {
-            Float64 t = CMTimeGetSeconds(ctime_);
-
-			[progressSlider setDoubleValue:100 * t / duration];            
+    if (isAVPlayer) {
+        if (avplayer.status == AVPlayerStatusReadyToPlay) {
+            CMTime ctime_ = avplayer.currentTime;
+            double duration = self.curItem.length;
+            if (CMTIME_IS_VALID(ctime_)) {
+                Float64 t = CMTimeGetSeconds(ctime_);
+                
+                [progressSlider setDoubleValue:100 * t / duration];            
+                
+                int playerLocation = (int)[self songLocation];
+                int min = playerLocation / 60;
+                int sec = playerLocation % 60;
+                [labelPosition setStringValue:[NSString stringWithFormat:@"%d:%02d",min,sec]];
+            }else{
+                [labelPosition setStringValue:@"loading..."];
+            }
             
-            int playerLocation = (int)[self songLocation];
+        }else{
+            [labelPosition setStringValue:@"loading..."];
+        }
+    }else{
+        if ([streamer isPlaying]) {
+            double t = streamer.progress;
+            double duration = self.curItem.length;
+            t = MIN(duration, t);
+            [progressSlider setDoubleValue:100 * t / duration];            
+            
+            int playerLocation = (int)t;
             int min = playerLocation / 60;
             int sec = playerLocation % 60;
             [labelPosition setStringValue:[NSString stringWithFormat:@"%d:%02d",min,sec]];
         }else{
             [labelPosition setStringValue:@"loading..."];
         }
-        
-    }else{
-        [labelPosition setStringValue:@"loading..."];
     }
+
 
 }
 
@@ -294,15 +326,5 @@
     }
 }
 
-//- (BOOL)validateMenuItem:(NSMenuItem *)item {
-//
-////    if ([item action] == @selector(onOrderFront)) {
-////        return YES;
-////    }else{
-////        return NO;
-////    }
-//    return YES;
-//
-//}
 
 @end

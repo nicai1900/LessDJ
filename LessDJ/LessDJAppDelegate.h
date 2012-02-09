@@ -34,7 +34,7 @@ typedef enum {
 }DJOperation;
 
 
-@class DBItem;
+@class DBItem , AudioStreamer;
 @interface LessDJAppDelegate : NSObject <NSApplicationDelegate, DBFMDelegate> {
     NSWindow *window;
     
@@ -47,6 +47,9 @@ typedef enum {
     DJOperation delayOperation; //some operation need callback to handle delay responses
     
     BOOL isStatePlaying;
+    
+    AudioStreamer *streamer;
+    BOOL isAVPlayer;
 }
 
 @property(nonatomic,retain)DBFM* fm;
@@ -63,8 +66,6 @@ typedef enum {
 
 - (IBAction)playNext:(id)sender;
 - (IBAction)onTogglePlay:(id)sender;
-- (IBAction)onBtnPlay:(id)sender;
-- (IBAction)onBtnPause:(id)sender;
 - (IBAction)onVolumeChanged:(id)sender;
 - (IBAction)onPopUpChanged:(id)sender;
 - (IBAction)onProgressChanged:(id)sender;
