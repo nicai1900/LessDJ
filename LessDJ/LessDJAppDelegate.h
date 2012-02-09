@@ -50,6 +50,17 @@ typedef enum {
     
     AudioStreamer *streamer;
     BOOL isAVPlayer;
+    
+    
+
+    NSSlider *progressSlider;
+    NSTextField *labelPosition;
+    NSTextField *labelTitle;
+    NSTextField *labelArtist;
+    NSImageView *viewArtwork;
+    NSPopUpButton *viewChannels;
+    NSTextField *labelAlbum;
+    NSButton *btnPlayState;
 }
 
 @property(nonatomic,retain)DBFM* fm;

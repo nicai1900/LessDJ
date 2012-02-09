@@ -61,8 +61,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
-//    isAVPlayer = NSClassFromString(@"AVPlayer") != nil; 
-    isAVPlayer = NO;
+    isAVPlayer = NSClassFromString(@"AVPlayer") != nil; 
+//    isAVPlayer = NO;
     self.fm = [[[DBFM alloc] init] autorelease];
     fm.delegate = self;
     delayOperation = OperationNext;
@@ -276,12 +276,17 @@
 
 - (CGFloat) songLocation
 {
-    CGFloat location = 0;
-    CMTime ctime_ = avplayer.currentTime;
-    if (CMTIME_IS_VALID(ctime_)) {
-        location = CMTimeGetSeconds(ctime_);
+    if (isAVPlayer) {
+        CGFloat location = 0;
+        CMTime ctime_ = avplayer.currentTime;
+        if (CMTIME_IS_VALID(ctime_)) {
+            location = CMTimeGetSeconds(ctime_);
+        }
+        return MAX(0, location);
+    }else{
+        return streamer.progress;
     }
-    return MAX(0, location);
+
 }
 
 
