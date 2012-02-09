@@ -9,5 +9,6 @@
 #import "LessDJAppDelegate.h"
 
 @interface LessDJAppDelegate (Stream)
-
+- (void)createStreamer:(NSURL*)url;
+- (void)destroyStreamer;
 @end

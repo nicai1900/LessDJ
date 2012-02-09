@@ -7,7 +7,58 @@
 //
 
 #import "LessDJAppDelegate+Stream.h"
+#import "AudioStreamer.h"
 
 @implementation LessDJAppDelegate (Stream)
+- (void)destroyStreamer
+{
+	if (streamer)
+	{
+		[[NSNotificationCenter defaultCenter]
+         removeObserver:self
+         name:ASStatusChangedNotification
+         object:streamer];
+
+		
+		[streamer stop];
+		[streamer release];
+		streamer = nil;
+	}
+}
+
+- (void)createStreamer:(NSURL*)url;
+{
+	if (streamer)
+	{
+        [self destroyStreamer];
+	}
+	
+
+	streamer = [[AudioStreamer alloc] initWithURL:url];
+
+	[[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(playbackStateChanged:)
+     name:ASStatusChangedNotification
+     object:streamer];
+}
+
+- (void)playbackStateChanged:(NSNotification *)aNotification
+{
+	if ([streamer isWaiting])
+	{
+//		[self setButtonImage:[NSImage imageNamed:@"loadingbutton"]];
+	}
+	else if ([streamer isPlaying])
+	{
+//		[self setButtonImage:[NSImage imageNamed:@"stopbutton"]];
+	}
+	else if ([streamer isIdle])
+	{
+//		[self destroyStreamer];
+//		[self setButtonImage:[NSImage imageNamed:@"playbutton"]];
+        [self playNext:nil];
+	}
+}
 
 @end
