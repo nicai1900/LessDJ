@@ -15,7 +15,6 @@
 		CA276BF614D689D000F952DC /* PLGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B9D1467D15B0007160C /* PLGlobal.m */; };
 		CA276BF714D689D000F952DC /* PLOG.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B9F1467D15B0007160C /* PLOG.m */; };
 		CA276BF814D689D000F952DC /* PLSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA11467D15B0007160C /* PLSettings.m */; };
-		CA276BF914D689D000F952DC /* T.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA41467D15B0007160C /* T.m */; };
 		CA276BFA14D689D000F952DC /* PLHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA71467D15B0007160C /* PLHttpClient.m */; };
 		CA276BFB14D689D000F952DC /* PLHttpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA91467D15B0007160C /* PLHttpConfig.m */; };
 		CA276BFC14D689D000F952DC /* PLHttpQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BAB1467D15B0007160C /* PLHttpQueue.m */; };
@@ -67,7 +66,6 @@
 		CA341BCC1467D15B0007160C /* PLGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B9D1467D15B0007160C /* PLGlobal.m */; };
 		CA341BCD1467D15B0007160C /* PLOG.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B9F1467D15B0007160C /* PLOG.m */; };
 		CA341BCE1467D15B0007160C /* PLSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA11467D15B0007160C /* PLSettings.m */; };
-		CA341BCF1467D15B0007160C /* T.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA41467D15B0007160C /* T.m */; };
 		CA341BD01467D15B0007160C /* PLHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA71467D15B0007160C /* PLHttpClient.m */; };
 		CA341BD11467D15B0007160C /* PLHttpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BA91467D15B0007160C /* PLHttpConfig.m */; };
 		CA341BD21467D15B0007160C /* PLHttpQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BAB1467D15B0007160C /* PLHttpQueue.m */; };
@@ -160,8 +158,6 @@
 		CA341BA01467D15B0007160C /* PLSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSettings.h; sourceTree = "<group>"; };
 		CA341BA11467D15B0007160C /* PLSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSettings.m; sourceTree = "<group>"; };
 		CA341BA21467D15B0007160C /* PlutoLand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlutoLand.h; sourceTree = "<group>"; };
-		CA341BA31467D15B0007160C /* T.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T.h; sourceTree = "<group>"; };
-		CA341BA41467D15B0007160C /* T.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T.m; sourceTree = "<group>"; };
 		CA341BA61467D15B0007160C /* PLHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpClient.h; sourceTree = "<group>"; };
 		CA341BA71467D15B0007160C /* PLHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHttpClient.m; sourceTree = "<group>"; };
 		CA341BA81467D15B0007160C /* PLHttpConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpConfig.h; sourceTree = "<group>"; };
@@ -315,8 +311,6 @@
 				CA341BA01467D15B0007160C /* PLSettings.h */,
 				CA341BA11467D15B0007160C /* PLSettings.m */,
 				CA341BA21467D15B0007160C /* PlutoLand.h */,
-				CA341BA31467D15B0007160C /* T.h */,
-				CA341BA41467D15B0007160C /* T.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -633,7 +627,6 @@
 				CA276BF614D689D000F952DC /* PLGlobal.m in Sources */,
 				CA276BF714D689D000F952DC /* PLOG.m in Sources */,
 				CA276BF814D689D000F952DC /* PLSettings.m in Sources */,
-				CA276BF914D689D000F952DC /* T.m in Sources */,
 				CA276BFA14D689D000F952DC /* PLHttpClient.m in Sources */,
 				CA276BFB14D689D000F952DC /* PLHttpConfig.m in Sources */,
 				CA276BFC14D689D000F952DC /* PLHttpQueue.m in Sources */,
@@ -671,7 +664,6 @@
 				CA341BCC1467D15B0007160C /* PLGlobal.m in Sources */,
 				CA341BCD1467D15B0007160C /* PLOG.m in Sources */,
 				CA341BCE1467D15B0007160C /* PLSettings.m in Sources */,
-				CA341BCF1467D15B0007160C /* T.m in Sources */,
 				CA341BD01467D15B0007160C /* PLHttpClient.m in Sources */,
 				CA341BD11467D15B0007160C /* PLHttpConfig.m in Sources */,
 				CA341BD21467D15B0007160C /* PLHttpQueue.m in Sources */,
