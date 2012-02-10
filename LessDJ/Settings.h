@@ -11,8 +11,9 @@
 
 @interface Settings : PLSettings
 {
-    
+    int channelIndex;
 }
+@property(assign) int channelIndex;
 
 + (Settings*)singleton;
 @end

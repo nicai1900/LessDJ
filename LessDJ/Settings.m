@@ -10,6 +10,8 @@
 
 @implementation Settings
 static Settings* _gInstance;
+@synthesize channelIndex;
+
 - (id)init
 {
     if (_gInstance) return _gInstance;
@@ -20,16 +22,13 @@ static Settings* _gInstance;
 - (void)setupDefaults
 {
     //implement by subclass, this method will only be invoked once
+    self.channelIndex = 0;
 }
 
 + (void)setupRoutes
 {
 	//implement by subclass
-	[self setupProperty:@"traditionchinese" withType:PLSettingTypeBool];
-    [self setupProperty:@"launchItunesAtAppStartup" withType:PLSettingTypeBool];
-    
-    [self setupProperty:@"isShowSingleLineBG" withType:PLSettingTypeBool];
-    [self setupProperty:@"isShowChangeSongNotify" withType:PLSettingTypeBool];
+	[self setupProperty:@"channelIndex" withType:PLSettingTypeInt];    
 }
 
 
