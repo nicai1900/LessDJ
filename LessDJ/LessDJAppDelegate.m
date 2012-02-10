@@ -15,9 +15,10 @@
 #import "NSImageView+RemoteImage.h"
 
 #import "AudioStreamer.h"
-
+#import "Settings.h"
 
 @implementation LessDJAppDelegate
+
 @synthesize labelPosition;
 @synthesize labelTitle;
 @synthesize labelArtist;
@@ -27,8 +28,7 @@
 @synthesize btnPlayState;
 @synthesize progressSlider;
 
-@synthesize window, fm;
-@synthesize curItem;
+@synthesize window, fm, curItem;
 
 
 #pragma mark - App Life Cycle
@@ -52,6 +52,10 @@
     return NSTerminateLater;
 }
 
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    [AppSetting() synchronize];
+}
 
 - (void)dealloc
 {
@@ -72,10 +76,7 @@
     
     [self addAVPlayerNotifyCallBack];
     [self updateProgressTimerState:YES];
-    
-#ifdef DEBUG
-//    window.level = NSStatusWindowLevel;
-#endif    
+
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
@@ -207,7 +208,8 @@
 
 - (IBAction)onPopUpChanged:(NSPopUpButton*)sender {
     delayOperation = OperationNext;
-    [fm setChannelAtIndex:[sender indexOfSelectedItem]];
+    AppSetting().channelIndex =  (int)[sender indexOfSelectedItem];
+    [fm setChannelAtIndex:AppSetting().channelIndex];
 }
 
 - (IBAction)onProgressChanged:(id)sender
@@ -299,10 +301,9 @@
             static int listRetryCount = 0;
             if (isSuccess) {
                 listRetryCount = 0;
-                //TODO: should select desire item
                 delayOperation = OperationNext;
-                [fm setChannelAtIndex:0];   // test mode : select first item
-                
+                long v = [fm setChannelAtIndex:AppSetting().channelIndex];   
+                [self.viewChannels selectItemAtIndex:v];
                 
             }else{
                 listRetryCount += 1;
@@ -321,7 +322,7 @@
             if (isSuccess) {
                 // precache images
                 
-                int size = MIN([fm.list.items count], 4);
+                int size = (int)MIN([fm.list.items count], 5);
                 for (int i = 0; i < size; i++) {
                     DBItem* item = [fm.list.items objectAtIndex:i];
                     [NSImageLoader fetch:item.albumArtworkLargeURL view:nil];

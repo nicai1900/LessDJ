@@ -78,6 +78,10 @@
 		CA341BF71467D48E0007160C /* DBList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF61467D48E0007160C /* DBList.m */; };
 		CA341BFA1467D4B30007160C /* DBFM.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF91467D4B30007160C /* DBFM.m */; };
 		CA341C0A1467E39B0007160C /* PLHttpBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341C091467E39B0007160C /* PLHttpBlock.m */; };
+		CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
+		CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
+		CA647C7B14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
+		CA647C7C14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
 		CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
 		CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
 		CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */; };
@@ -182,6 +186,10 @@
 		CA341BF91467D4B30007160C /* DBFM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFM.m; sourceTree = "<group>"; };
 		CA341C081467E39A0007160C /* PLHttpBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpBlock.h; sourceTree = "<group>"; };
 		CA341C091467E39B0007160C /* PLHttpBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHttpBlock.m; sourceTree = "<group>"; };
+		CA647C7414E5267100D0F11C /* LessDJAppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+action.h"; sourceTree = "<group>"; };
+		CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+action.m"; sourceTree = "<group>"; };
+		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		CA647C7A14E526B600D0F11C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
 		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
 		CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+Stream.h"; sourceTree = "<group>"; };
@@ -448,6 +456,8 @@
 				CA81090B143459B500AADE2C /* LessDJAppDelegate.m */,
 				CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */,
 				CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */,
+				CA647C7414E5267100D0F11C /* LessDJAppDelegate+action.h */,
+				CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */,
 				CA81090D143459B600AADE2C /* MainMenu.xib */,
 				CA8108FF143459B500AADE2C /* Supporting Files */,
 				CA341C081467E39A0007160C /* PLHttpBlock.h */,
@@ -456,6 +466,8 @@
 				CAC4B1D8146D09860017EA73 /* NSApplication+BridgeSupport.m */,
 				CA779C73146FF4BC00D085AF /* NSVIewBG.h */,
 				CA779C74146FF4BC00D085AF /* NSVIewBG.m */,
+				CA647C7914E526B600D0F11C /* Settings.h */,
+				CA647C7A14E526B600D0F11C /* Settings.m */,
 			);
 			path = LessDJ;
 			sourceTree = "<group>";
@@ -649,6 +661,8 @@
 				CA276C0D14D689D000F952DC /* NSVIewBG.m in Sources */,
 				CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */,
 				CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
+				CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
+				CA647C7C14E526B600D0F11C /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +700,8 @@
 				CA779C75146FF4BD00D085AF /* NSVIewBG.m in Sources */,
 				CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */,
 				CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
+				CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
+				CA647C7B14E526B600D0F11C /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,7 @@ typedef enum {
     NSWindow *window;
     
     DBFM*       fm;
+
 	NSTimer*    progressUpdateTimer;
     float       volume;    
     AVPlayer*   avplayer;       //using avqueuePlayer -insertItem will freeze app in a while(by placing it on background it not works at all)
