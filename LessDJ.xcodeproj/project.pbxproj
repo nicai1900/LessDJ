@@ -190,6 +190,7 @@
 		CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+action.m"; sourceTree = "<group>"; };
 		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CA647C7A14E526B600D0F11C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		CA647CA014E5351300D0F11C /* LessDJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LessDJ.entitlements; path = ../../LessDJ.entitlements; sourceTree = "<group>"; };
 		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
 		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
 		CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+Stream.h"; sourceTree = "<group>"; };
@@ -279,6 +280,7 @@
 		CA276C3414D68B2800F952DC /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				CA647CA014E5351300D0F11C /* LessDJ.entitlements */,
 				CA276C3514D68B5C00F952DC /* MainMenu.xib */,
 			);
 			path = AppStore;
@@ -738,7 +740,8 @@
 		CA276C2D14D689D000F952DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = LessDJ.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LessDJ/LessDJ-Prefix.pch";
@@ -751,6 +754,7 @@
 		CA276C2E14D689D000F952DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LessDJ.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
