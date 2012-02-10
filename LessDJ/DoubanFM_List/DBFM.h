@@ -41,7 +41,7 @@ typedef enum{
 
 - (void)_updateList:(NSDictionary*)dict;
 
-- (void)setChannelAtIndex:(int)index;
+- (long)setChannelAtIndex:(long)index;
 @end
 
 

@@ -72,10 +72,13 @@
     }
 }
 
-- (void)setChannelAtIndex:(int)index
+- (long)setChannelAtIndex:(long)index
 {    
+    index = MIN(index,_channels.count -1);
+    index = MAX(index,0);
     _currentChannel = [_channels objectAtIndex:index];
     [_list updateWithChannelItem:_currentChannel];
+    return index;
 }
 @end
 
