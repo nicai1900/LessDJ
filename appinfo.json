@@ -1,5 +1,5 @@
 {
-   err:0
+   err:0,
    version:"1.1",
    build:27,
    info: "hello world"
