@@ -35,6 +35,8 @@ typedef enum {
 
 
 @class DBItem , AudioStreamer;
+
+@class WindowController;
 @interface LessDJAppDelegate : NSObject <NSApplicationDelegate, DBFMDelegate> {
     NSWindow *window;
     
@@ -62,6 +64,8 @@ typedef enum {
     NSPopUpButton *viewChannels;
     NSTextField *labelAlbum;
     NSButton *btnPlayState;
+    
+    WindowController* windowc;
 }
 
 @property(nonatomic,retain)DBFM* fm;
@@ -90,4 +94,5 @@ typedef enum {
 - (void)updateProgressTimerState:(BOOL)isOn;
 - (void)addAVPlayerNotifyCallBack;
 
++ (LessDJAppDelegate*)s;
 @end

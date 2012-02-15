@@ -17,6 +17,8 @@
 #import "AudioStreamer.h"
 #import "Settings.h"
 
+#import "WindowController.h"
+
 @implementation LessDJAppDelegate
 
 @synthesize labelPosition;
@@ -77,6 +79,9 @@
     [self addAVPlayerNotifyCallBack];
     [self updateProgressTimerState:YES];
 
+    windowc = [[WindowController alloc] init];
+    [windowc.window center];
+    [windowc showWindow:nil];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
@@ -182,7 +187,7 @@
                                                                  userInfo:nil
                                                        deliverImmediately:YES];
 
-    
+    [windowc songChanged:item];
 }
 
 - (IBAction)onTogglePlay:(id)sender
@@ -333,4 +338,8 @@
 }
 
 
++ (LessDJAppDelegate*)s
+{
+    return (LessDJAppDelegate*)([NSApplication sharedApplication].delegate);
+}
 @end

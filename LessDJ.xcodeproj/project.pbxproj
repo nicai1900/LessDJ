@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA09E4E114EBC2A900C16B85 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA09E4E014EBC2A900C16B85 /* WindowController.m */; };
+		CA09E4E214EBC2A900C16B85 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA09E4E014EBC2A900C16B85 /* WindowController.m */; };
+		CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA09E4E314EBC2BC00C16B85 /* WebKit.framework */; };
+		CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
+		CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
 		CA276BF114D689D000F952DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA810904143459B500AADE2C /* main.m */; };
 		CA276BF214D689D000F952DC /* LessDJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* LessDJAppDelegate.m */; };
 		CA276BF314D689D000F952DC /* NSDictionary+NonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8A1467D15B0007160C /* NSDictionary+NonNull.m */; };
@@ -145,6 +150,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA09E4DF14EBC2A900C16B85 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowController.h; path = theme/WindowController.h; sourceTree = "<group>"; };
+		CA09E4E014EBC2A900C16B85 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowController.m; path = theme/WindowController.m; sourceTree = "<group>"; };
+		CA09E4E314EBC2BC00C16B85 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CA09E4E514EBC2F900C16B85 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WindowController.xib; path = theme/WindowController.xib; sourceTree = "<group>"; };
 		CA276C2F14D689D000F952DC /* LessDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA276C3514D68B5C00F952DC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		CA341B881467D15B0007160C /* NSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAdditions.h; sourceTree = "<group>"; };
@@ -254,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */,
 				CA276C1014D689D000F952DC /* CoreMedia.framework in Frameworks */,
 				CA276C1114D689D000F952DC /* AVFoundation.framework in Frameworks */,
 				CA276C1214D689D000F952DC /* QuartzCore.framework in Frameworks */,
@@ -277,6 +287,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA09E4DD14EBC26A00C16B85 /* HTML_UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA09E4DF14EBC2A900C16B85 /* WindowController.h */,
+				CA09E4E014EBC2A900C16B85 /* WindowController.m */,
+				CA09E4E514EBC2F900C16B85 /* WindowController.xib */,
+			);
+			name = HTML_UI;
+			sourceTree = "<group>";
+		};
 		CA276C3414D68B2800F952DC /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +444,7 @@
 		CA8108F7143459B500AADE2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA09E4E314EBC2BC00C16B85 /* WebKit.framework */,
 				CAC4B1BC146CDB4A0017EA73 /* CoreMedia.framework */,
 				CAD051C5146BD276005E8929 /* AVFoundation.framework */,
 				CA341BDF1467D22F0007160C /* QuartzCore.framework */,
@@ -447,6 +468,7 @@
 		CA8108FE143459B500AADE2C /* LessDJ */ = {
 			isa = PBXGroup;
 			children = (
+				CA09E4DD14EBC26A00C16B85 /* HTML_UI */,
 				CA6F552E14E408CC00A53981 /* AudioStream */,
 				CA276C3414D68B2800F952DC /* AppStore */,
 				CA779C58146FEBE100D085AF /* custom slider */,
@@ -596,6 +618,7 @@
 				CA276C2814D689D000F952DC /* dsa_pub.pem in Resources */,
 				CA276C2914D689D000F952DC /* vinyltunes.icns in Resources */,
 				CA276C3614D68B5C00F952DC /* MainMenu.xib in Resources */,
+				CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +646,7 @@
 				CA779C7B146FF7B000D085AF /* pause.png in Resources */,
 				CA779CA914700CC400D085AF /* dsa_pub.pem in Resources */,
 				CA779CCD1470F0EA00D085AF /* vinyltunes.icns in Resources */,
+				CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +689,7 @@
 				CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
 				CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
 				CA647C7C14E526B600D0F11C /* Settings.m in Sources */,
+				CA09E4E214EBC2A900C16B85 /* WindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +729,7 @@
 				CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
 				CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
 				CA647C7B14E526B600D0F11C /* Settings.m in Sources */,
+				CA09E4E114EBC2A900C16B85 /* WindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
