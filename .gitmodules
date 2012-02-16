@@ -1,3 +1,6 @@
 [submodule "AudioStreamer"]
 	path = AudioStreamer
 	url = https://github.com/rayh/AudioStreamer.git
+[submodule "AppleJam"]
+	path = AppleJam
+	url = git@github.com:xhan/AppleJam.git
