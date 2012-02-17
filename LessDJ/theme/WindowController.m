@@ -8,7 +8,7 @@
 
 #import "WindowController.h"
 #import "DBList.h"
-#import "LessDJAppDelegate.h"
+#import "AppDelegate.h"
 #import "JSON.h"
 @implementation WindowController
 @synthesize webView;
@@ -36,7 +36,7 @@
 
 - (void)ontick
 {
-    float location = [LessDJAppDelegate s].songLocation;
+    float location = [AppDelegate s].songLocation;
     NSString* script =[NSString stringWithFormat:@"app_player_location_changed(%f)",location];
     [webView stringByEvaluatingJavaScriptFromString:script];
 }
@@ -84,9 +84,9 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     NSString* action = [url resourceSpecifier];
     if ([DJ_SCHEME isEqualToString:scheme]) {
         if ([action isEqualToString:DJ_action_next]) {
-            [[LessDJAppDelegate s] playNext:nil];
+            [[AppDelegate s] playNext:nil];
         }else if ([action isEqualToString:DJ_action_toggle] ){
-            [[LessDJAppDelegate s] onTogglePlay:nil];
+            [[AppDelegate s] onTogglePlay:nil];
         }
         [listener ignore];
     }else{

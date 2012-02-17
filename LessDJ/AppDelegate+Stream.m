@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate+Stream.h"
+#import "AppDelegate+Stream.h"
 #import "AudioStreamer.h"
 
-@implementation LessDJAppDelegate (Stream)
+@implementation AppDelegate (Stream)
 - (void)destroyStreamer
 {
 	if (streamer)

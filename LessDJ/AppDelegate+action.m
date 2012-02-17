@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate+action.h"
+#import "AppDelegate+action.h"
 
-@implementation LessDJAppDelegate (action)
+@implementation AppDelegate (action)
 
 @end

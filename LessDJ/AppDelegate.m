@@ -6,8 +6,8 @@
 //  Copyright 2011 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate.h"
-#import "LessDJAppDelegate+Stream.h"
+#import "AppDelegate.h"
+#import "AppDelegate+Stream.h"
 
 #import "DBFM.h"
 #import "DBList.h"
@@ -19,7 +19,7 @@
 
 #import "WindowController.h"
 
-@implementation LessDJAppDelegate
+@implementation AppDelegate
 
 @synthesize labelPosition;
 @synthesize labelTitle;
@@ -339,8 +339,8 @@
 }
 
 
-+ (LessDJAppDelegate*)s
++ (AppDelegate*)s
 {
-    return (LessDJAppDelegate*)([NSApplication sharedApplication].delegate);
+    return (AppDelegate*)([NSApplication sharedApplication].delegate);
 }
 @end

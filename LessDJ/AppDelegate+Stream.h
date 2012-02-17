@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate.h"
+#import "AppDelegate.h"
 
-@interface LessDJAppDelegate (Stream)
+@interface AppDelegate (Stream)
 - (void)createStreamer:(NSURL*)url;
 - (void)destroyStreamer;
 @end
