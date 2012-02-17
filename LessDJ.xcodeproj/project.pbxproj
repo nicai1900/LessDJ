@@ -83,6 +83,13 @@
 		CA341BF71467D48E0007160C /* DBList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF61467D48E0007160C /* DBList.m */; };
 		CA341BFA1467D4B30007160C /* DBFM.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF91467D4B30007160C /* DBFM.m */; };
 		CA341C0A1467E39B0007160C /* PLHttpBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341C091467E39B0007160C /* PLHttpBlock.m */; };
+		CA4D188214ED0CB8000118DC /* AppleJam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188114ED0CB8000118DC /* AppleJam.m */; };
+		CA4D188314ED0CB8000118DC /* AppleJam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188114ED0CB8000118DC /* AppleJam.m */; };
+		CA4D188514ED16BA000118DC /* AppleJam.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJam.js */; };
+		CA4D188614ED16BA000118DC /* AppleJam.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJam.js */; };
+		CA4D188814ED475B000118DC /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
+		CA4D188914ED475B000118DC /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
+		CA5BDCD314ED7010008AD4AD /* AppleJam.js in Resources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJam.js */; };
 		CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
 		CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
 		CA647C7B14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
@@ -195,6 +202,10 @@
 		CA341BF91467D4B30007160C /* DBFM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFM.m; sourceTree = "<group>"; };
 		CA341C081467E39A0007160C /* PLHttpBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpBlock.h; sourceTree = "<group>"; };
 		CA341C091467E39B0007160C /* PLHttpBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHttpBlock.m; sourceTree = "<group>"; };
+		CA4D188014ED0CB8000118DC /* AppleJam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleJam.h; sourceTree = "<group>"; };
+		CA4D188114ED0CB8000118DC /* AppleJam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleJam.m; sourceTree = "<group>"; };
+		CA4D188414ED16BA000118DC /* AppleJam.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AppleJam.js; sourceTree = "<group>"; };
+		CA4D188714ED475B000118DC /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		CA647C7414E5267100D0F11C /* LessDJAppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+action.h"; sourceTree = "<group>"; };
 		CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+action.m"; sourceTree = "<group>"; };
 		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -378,6 +389,18 @@
 			path = SBJSON;
 			sourceTree = "<group>";
 		};
+		CA4D187F14ED0C9D000118DC /* AppleJam-SRC */ = {
+			isa = PBXGroup;
+			children = (
+				CA4D188714ED475B000118DC /* jquery.js */,
+				CA4D188014ED0CB8000118DC /* AppleJam.h */,
+				CA4D188114ED0CB8000118DC /* AppleJam.m */,
+				CA4D188414ED16BA000118DC /* AppleJam.js */,
+			);
+			name = "AppleJam-SRC";
+			path = AppleJam/src;
+			sourceTree = SOURCE_ROOT;
+		};
 		CA6F552E14E408CC00A53981 /* AudioStream */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				CA779CCC1470F0EA00D085AF /* vinyltunes.icns */,
+				CA4D187F14ED0C9D000118DC /* AppleJam-SRC */,
 				CA341BE11467D4100007160C /* SBJSON */,
 				CA341B861467D15B0007160C /* PlutoLand */,
 				CA8108FE143459B500AADE2C /* LessDJ */,
@@ -619,6 +643,7 @@
 				CA276C2914D689D000F952DC /* vinyltunes.icns in Resources */,
 				CA276C3614D68B5C00F952DC /* MainMenu.xib in Resources */,
 				CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */,
+				CA5BDCD314ED7010008AD4AD /* AppleJam.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +715,9 @@
 				CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
 				CA647C7C14E526B600D0F11C /* Settings.m in Sources */,
 				CA09E4E214EBC2A900C16B85 /* WindowController.m in Sources */,
+				CA4D188314ED0CB8000118DC /* AppleJam.m in Sources */,
+				CA4D188614ED16BA000118DC /* AppleJam.js in Sources */,
+				CA4D188914ED475B000118DC /* jquery.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +758,9 @@
 				CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
 				CA647C7B14E526B600D0F11C /* Settings.m in Sources */,
 				CA09E4E114EBC2A900C16B85 /* WindowController.m in Sources */,
+				CA4D188214ED0CB8000118DC /* AppleJam.m in Sources */,
+				CA4D188514ED16BA000118DC /* AppleJam.js in Sources */,
+				CA4D188814ED475B000118DC /* jquery.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,15 +9,35 @@
 #import "WindowController.h"
 #import "DBList.h"
 #import "LessDJAppDelegate.h"
-
+#import "JSON.h"
 @implementation WindowController
 @synthesize webView;
 
 
 - (void)songChanged:(DBItem*)item
 {
-    NSString* script = [NSString stringWithFormat:@"DJ.app_songchanged(new Track('%@','%@','%@'))",
-     item.title, item.artist,item.album];
+//    NSString* script = [NSString stringWithFormat:@"DJ.app_songchanged(new Track('%@','%@','%@'))",
+//     item.title, item.artist,item.album];
+    NSString* json = [item.dict JSONRepresentation];
+    NSString* script = [NSString stringWithFormat:@"app_song_changed(%@)",json];
+    [webView stringByEvaluatingJavaScriptFromString:script];
+}
+
+- (void)play:(BOOL)isplay
+{
+    NSString* script =[NSString stringWithFormat:@"app_player_state_change(%d,1)",isplay];
+    [webView stringByEvaluatingJavaScriptFromString:script];
+}
+
+- (void)loading:(BOOL)isload
+{
+    
+}
+
+- (void)ontick
+{
+    float location = [LessDJAppDelegate s].songLocation;
+    NSString* script =[NSString stringWithFormat:@"app_player_location_changed(%f)",location];
     [webView stringByEvaluatingJavaScriptFromString:script];
 }
 
@@ -41,16 +61,17 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    NSString*path = @"/Users/less/Desktop/test.bun/index.html";
+    NSString*path = @"/Users/less/Desktop/test.bun/index2.html";
     NSURL* url = [NSURL fileURLWithPath:path];
     [webView setPolicyDelegate:self];
+    [webView setFrameLoadDelegate:self];
     [[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 
-#define DJ_SCHEME @"lessdj"
-#define DJ_action_next @"next"
-#define DJ_action_toggle @"toggle_play"
+#define DJ_SCHEME @"ajam"
+#define DJ_action_next @"Player.nextTrack"
+#define DJ_action_toggle @"Player.togglePlay"
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation
         request:(NSURLRequest *)request
@@ -64,11 +85,33 @@ decisionListener:(id<WebPolicyDecisionListener>)listener
     if ([DJ_SCHEME isEqualToString:scheme]) {
         if ([action isEqualToString:DJ_action_next]) {
             [[LessDJAppDelegate s] playNext:nil];
+        }else if ([action isEqualToString:DJ_action_toggle] ){
+            [[LessDJAppDelegate s] onTogglePlay:nil];
         }
         [listener ignore];
     }else{
         [listener use];
     }
     
+}
+
+
+- (void)webView:(WebView *)awebView didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame
+{
+    NSLog(@"clean");
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"AppleJam.js" withExtension:nil];
+    NSString* str = [NSString stringWithFormat:@"document.write(\"<script src='%@' type='text/javascript'></script>\")",[url absoluteString]];
+    NSLog(@"%@",str);
+//    [webView stringByEvaluatingJavaScriptFromString:str];
+}
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+    NSLog(@"loaded");
+//    [webView stringByEvaluatingJavaScriptFromString:@"Jam.markAsLoaded();"];
+    [NSTimer scheduledTimerWithTimeInterval:0.1
+                                     target:self
+                                   selector:@selector(ontick) userInfo:nil
+                                    repeats:YES];
 }
 @end

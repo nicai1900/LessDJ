@@ -201,6 +201,7 @@
         if(isAVPlayer) [avplayer pause];
         else  [streamer pause];
     }
+    [windowc play:isStatePlaying];
 }
 
 

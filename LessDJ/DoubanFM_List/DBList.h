@@ -58,5 +58,6 @@
 @property(readonly) NSURL*    songURL;
 @property(readonly) int       length;
 @property(readonly) NSString* publicTime;
+@property(readonly) NSDictionary*dict;
 //- (NSScriptObjectSpecifier *)objectSpecifier;
 @end

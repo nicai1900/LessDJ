@@ -17,5 +17,7 @@
 @property (assign) IBOutlet WebView *webView;
 
 - (void)songChanged:(DBItem*)item;
-
+- (void)play:(BOOL)isplay;
+- (void)loading:(BOOL)isload;
+- (void)ontick;
 @end
