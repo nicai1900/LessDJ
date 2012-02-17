@@ -9,15 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@class DBItem;
+@class DBItem, AppleJam;
 @interface WindowController : NSWindowController {
     WebView *webView;
+    AppleJam*jam;
 }
 
 @property (assign) IBOutlet WebView *webView;
 
-- (void)songChanged:(DBItem*)item;
-- (void)play:(BOOL)isplay;
-- (void)loading:(BOOL)isload;
-- (void)ontick;
 @end

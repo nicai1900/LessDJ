@@ -10,6 +10,9 @@
 #import "JamCommand.h"
 @class DBItem;
 @interface Player : JamCommand
+{
+    NSTimer*timer;
+}
 +(Player*)s;
 
 // js connection methods
@@ -26,5 +29,8 @@
 - (void)appArtworkChanged:(NSURL*)url;
 - (void)appStateChanged:(BOOL)isPlaying;
 - (void)appBuffingChanged:(BOOL)isBuffing;
+- (void)appChannelLoaded:(NSDictionary*)channels;
 
+- (void)_onTick;
+- (void)startTick;
 @end

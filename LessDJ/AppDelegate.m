@@ -18,7 +18,7 @@
 #import "Settings.h"
 
 #import "WindowController.h"
-
+#import "Player.h"
 @implementation AppDelegate
 
 @synthesize labelPosition;
@@ -187,7 +187,9 @@
                                                                  userInfo:nil
                                                        deliverImmediately:YES];
 
-    [windowc songChanged:item];
+
+    [[Player s] appSongChanged:item];
+    
 }
 
 - (IBAction)onTogglePlay:(id)sender
@@ -201,7 +203,8 @@
         if(isAVPlayer) [avplayer pause];
         else  [streamer pause];
     }
-    [windowc play:isStatePlaying];
+
+    [[Player s] appStateChanged:isStatePlaying];
 }
 
 
@@ -229,6 +232,20 @@
     }
 
 }
+
+- (void)onChangeVolume:(float)value
+{
+    
+}
+- (void)onChangeChannel:(int)channel
+{
+    
+}
+- (void)onChangeProgress:(float)value
+{
+    
+}
+
 
 - (IBAction)onGetLL:(id)sender {
 //#ifdef Appstore    

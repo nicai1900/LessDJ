@@ -85,6 +85,11 @@ typedef enum {
 - (IBAction)onVolumeChanged:(id)sender;
 - (IBAction)onPopUpChanged:(id)sender;
 - (IBAction)onProgressChanged:(id)sender;
+
+- (void)onChangeVolume:(float)value;
+- (void)onChangeChannel:(int)channel;
+- (void)onChangeProgress:(float)value;
+
 - (IBAction)onGetLL:(id)sender;
 - (IBAction)onOrderFront:(id)sender;
 
