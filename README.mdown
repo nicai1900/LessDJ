@@ -4,3 +4,16 @@
 这是一个开源的电台应用软件,支持很多电台渠道.  
 #**完**
 
+TODO-Lists
+----------
+* theme test
+* theme manager(internal)
+* theme viewer
+* theme preivew
+* theme install
+* media key handler
+* fix volumen issue on 10.6
+* fix duplex sound instance issue on 10.6
+* menu changed
+* sound freeze issue
+* personal music channel support
