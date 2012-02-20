@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate.h"
+#import "AppDelegate.h"
 
-@interface LessDJAppDelegate (action)
-
+@interface AppDelegate (action)
+- (IBAction)reloadTheme:(id)sender;
 @end

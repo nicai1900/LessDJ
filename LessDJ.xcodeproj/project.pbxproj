@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA06D16A14EE9E5D00E31090 /* JamCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D16914EE9E5D00E31090 /* JamCommand.m */; };
+		CA06D16B14EE9E5D00E31090 /* JamCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D16914EE9E5D00E31090 /* JamCommand.m */; };
+		CA06D16F14EEAA5D00E31090 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D16E14EEAA5D00E31090 /* Player.m */; };
+		CA06D17014EEAA5D00E31090 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D16E14EEAA5D00E31090 /* Player.m */; };
+		CA06D17714EEAC0800E31090 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D17614EEAC0800E31090 /* JSONKit.m */; };
+		CA06D17814EEAC0800E31090 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CA06D17614EEAC0800E31090 /* JSONKit.m */; };
+		CA09E4E114EBC2A900C16B85 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA09E4E014EBC2A900C16B85 /* WindowController.m */; };
+		CA09E4E214EBC2A900C16B85 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA09E4E014EBC2A900C16B85 /* WindowController.m */; };
+		CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA09E4E314EBC2BC00C16B85 /* WebKit.framework */; };
+		CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
+		CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
+		CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
+		CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
+		CA20021714F29772005C4CD4 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
 		CA276BF114D689D000F952DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA810904143459B500AADE2C /* main.m */; };
-		CA276BF214D689D000F952DC /* LessDJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* LessDJAppDelegate.m */; };
+		CA276BF214D689D000F952DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* AppDelegate.m */; };
 		CA276BF314D689D000F952DC /* NSDictionary+NonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8A1467D15B0007160C /* NSDictionary+NonNull.m */; };
 		CA276BF414D689D000F952DC /* NSDictionary+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8C1467D15B0007160C /* NSDictionary+URL.m */; };
 		CA276BF514D689D000F952DC /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8E1467D15B0007160C /* NSString+Addition.m */; };
@@ -78,14 +92,21 @@
 		CA341BF71467D48E0007160C /* DBList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF61467D48E0007160C /* DBList.m */; };
 		CA341BFA1467D4B30007160C /* DBFM.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341BF91467D4B30007160C /* DBFM.m */; };
 		CA341C0A1467E39B0007160C /* PLHttpBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341C091467E39B0007160C /* PLHttpBlock.m */; };
-		CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
-		CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */; };
+		CA4D188214ED0CB8000118DC /* AppleJam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188114ED0CB8000118DC /* AppleJam.m */; };
+		CA4D188314ED0CB8000118DC /* AppleJam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188114ED0CB8000118DC /* AppleJam.m */; };
+		CA4D188514ED16BA000118DC /* AppleJamBase.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJamBase.js */; };
+		CA4D188614ED16BA000118DC /* AppleJamBase.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJamBase.js */; };
+		CA4D188814ED475B000118DC /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
+		CA4D188914ED475B000118DC /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
+		CA5BDCD314ED7010008AD4AD /* AppleJamBase.js in Resources */ = {isa = PBXBuildFile; fileRef = CA4D188414ED16BA000118DC /* AppleJamBase.js */; };
+		CA647C7614E5267100D0F11C /* AppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* AppDelegate+action.m */; };
+		CA647C7714E5267100D0F11C /* AppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* AppDelegate+action.m */; };
 		CA647C7B14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
 		CA647C7C14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
 		CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
 		CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
-		CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */; };
-		CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */; };
+		CA6F553914E40B1C00A53981 /* AppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */; };
+		CA6F553A14E40B1C00A53981 /* AppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */; };
 		CA779C49146FDB9C00D085AF /* NSImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C48146FDB9C00D085AF /* NSImageCache.m */; };
 		CA779C4C146FDF6700D085AF /* PLImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C4B146FDF6700D085AF /* PLImageRequest.m */; };
 		CA779C4F146FDFF800D085AF /* NSImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C4E146FDFF800D085AF /* NSImageLoader.m */; };
@@ -113,7 +134,7 @@
 		CA810903143459B500AADE2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA810901143459B500AADE2C /* InfoPlist.strings */; };
 		CA810905143459B500AADE2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA810904143459B500AADE2C /* main.m */; };
 		CA810909143459B500AADE2C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CA810907143459B500AADE2C /* Credits.rtf */; };
-		CA81090C143459B500AADE2C /* LessDJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* LessDJAppDelegate.m */; };
+		CA81090C143459B500AADE2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* AppDelegate.m */; };
 		CA81090F143459B600AADE2C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA81090D143459B600AADE2C /* MainMenu.xib */; };
 		CA8109731434628800AADE2C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8109721434628800AADE2C /* AudioToolbox.framework */; };
 		CAC4B1BD146CDB4A0017EA73 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC4B1BC146CDB4A0017EA73 /* CoreMedia.framework */; };
@@ -145,6 +166,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA06D16814EE9E5D00E31090 /* JamCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JamCommand.h; sourceTree = "<group>"; };
+		CA06D16914EE9E5D00E31090 /* JamCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JamCommand.m; sourceTree = "<group>"; };
+		CA06D16D14EEAA5D00E31090 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		CA06D16E14EEAA5D00E31090 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		CA06D17514EEAC0800E31090 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		CA06D17614EEAC0800E31090 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		CA09E4DF14EBC2A900C16B85 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowController.h; path = theme/WindowController.h; sourceTree = "<group>"; };
+		CA09E4E014EBC2A900C16B85 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowController.m; path = theme/WindowController.m; sourceTree = "<group>"; };
+		CA09E4E314EBC2BC00C16B85 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CA09E4E514EBC2F900C16B85 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WindowController.xib; path = theme/WindowController.xib; sourceTree = "<group>"; };
+		CA20021214F285EE005C4CD4 /* README.mdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
+		CA20021314F28D00005C4CD4 /* ThemeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeInfo.h; path = theme/ThemeInfo.h; sourceTree = "<group>"; };
+		CA20021414F28D00005C4CD4 /* ThemeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeInfo.m; path = theme/ThemeInfo.m; sourceTree = "<group>"; };
 		CA276C2F14D689D000F952DC /* LessDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA276C3514D68B5C00F952DC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		CA341B881467D15B0007160C /* NSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAdditions.h; sourceTree = "<group>"; };
@@ -186,15 +220,19 @@
 		CA341BF91467D4B30007160C /* DBFM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFM.m; sourceTree = "<group>"; };
 		CA341C081467E39A0007160C /* PLHttpBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHttpBlock.h; sourceTree = "<group>"; };
 		CA341C091467E39B0007160C /* PLHttpBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHttpBlock.m; sourceTree = "<group>"; };
-		CA647C7414E5267100D0F11C /* LessDJAppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+action.h"; sourceTree = "<group>"; };
-		CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+action.m"; sourceTree = "<group>"; };
+		CA4D188014ED0CB8000118DC /* AppleJam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleJam.h; sourceTree = "<group>"; };
+		CA4D188114ED0CB8000118DC /* AppleJam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleJam.m; sourceTree = "<group>"; };
+		CA4D188414ED16BA000118DC /* AppleJamBase.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AppleJamBase.js; sourceTree = "<group>"; };
+		CA4D188714ED475B000118DC /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		CA647C7414E5267100D0F11C /* AppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+action.h"; sourceTree = "<group>"; };
+		CA647C7514E5267100D0F11C /* AppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+action.m"; sourceTree = "<group>"; };
 		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CA647C7A14E526B600D0F11C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		CA647CA014E5351300D0F11C /* LessDJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LessDJ.entitlements; path = ../../LessDJ.entitlements; sourceTree = "<group>"; };
 		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
 		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
-		CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LessDJAppDelegate+Stream.h"; sourceTree = "<group>"; };
-		CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LessDJAppDelegate+Stream.m"; sourceTree = "<group>"; };
+		CA6F553714E40B1C00A53981 /* AppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Stream.h"; sourceTree = "<group>"; };
+		CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Stream.m"; sourceTree = "<group>"; };
 		CA779C47146FDB9C00D085AF /* NSImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSImageCache.h; path = NSImageAddition/NSImageCache.h; sourceTree = "<group>"; };
 		CA779C48146FDB9C00D085AF /* NSImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSImageCache.m; path = NSImageAddition/NSImageCache.m; sourceTree = "<group>"; };
 		CA779C4A146FDF6700D085AF /* PLImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageRequest.h; sourceTree = "<group>"; };
@@ -235,8 +273,8 @@
 		CA810904143459B500AADE2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA810906143459B500AADE2C /* LessDJ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LessDJ-Prefix.pch"; sourceTree = "<group>"; };
 		CA810908143459B500AADE2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CA81090A143459B500AADE2C /* LessDJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessDJAppDelegate.h; sourceTree = "<group>"; };
-		CA81090B143459B500AADE2C /* LessDJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessDJAppDelegate.m; sourceTree = "<group>"; };
+		CA81090A143459B500AADE2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA81090B143459B500AADE2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA81090E143459B600AADE2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CA81091814345B6D00AADE2C /* douban.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = douban.mdown; sourceTree = "<group>"; };
 		CA8109721434628800AADE2C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -254,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */,
 				CA276C1014D689D000F952DC /* CoreMedia.framework in Frameworks */,
 				CA276C1114D689D000F952DC /* AVFoundation.framework in Frameworks */,
 				CA276C1214D689D000F952DC /* QuartzCore.framework in Frameworks */,
@@ -277,6 +316,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA09E4DD14EBC26A00C16B85 /* HTML_UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA09E4DF14EBC2A900C16B85 /* WindowController.h */,
+				CA09E4E014EBC2A900C16B85 /* WindowController.m */,
+				CA09E4E514EBC2F900C16B85 /* WindowController.xib */,
+				CA06D16D14EEAA5D00E31090 /* Player.h */,
+				CA06D16E14EEAA5D00E31090 /* Player.m */,
+				CA20021314F28D00005C4CD4 /* ThemeInfo.h */,
+				CA20021414F28D00005C4CD4 /* ThemeInfo.m */,
+			);
+			name = HTML_UI;
+			sourceTree = "<group>";
+		};
 		CA276C3414D68B2800F952DC /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +411,22 @@
 			path = SBJSON;
 			sourceTree = "<group>";
 		};
+		CA4D187F14ED0C9D000118DC /* AppleJam-SRC */ = {
+			isa = PBXGroup;
+			children = (
+				CA06D17514EEAC0800E31090 /* JSONKit.h */,
+				CA06D17614EEAC0800E31090 /* JSONKit.m */,
+				CA4D188714ED475B000118DC /* jquery.js */,
+				CA4D188014ED0CB8000118DC /* AppleJam.h */,
+				CA4D188114ED0CB8000118DC /* AppleJam.m */,
+				CA4D188414ED16BA000118DC /* AppleJamBase.js */,
+				CA06D16814EE9E5D00E31090 /* JamCommand.h */,
+				CA06D16914EE9E5D00E31090 /* JamCommand.m */,
+			);
+			name = "AppleJam-SRC";
+			path = AppleJam/src;
+			sourceTree = SOURCE_ROOT;
+		};
 		CA6F552E14E408CC00A53981 /* AudioStream */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,7 +472,9 @@
 		CA8108E9143459B500AADE2C = {
 			isa = PBXGroup;
 			children = (
+				CA20021214F285EE005C4CD4 /* README.mdown */,
 				CA779CCC1470F0EA00D085AF /* vinyltunes.icns */,
+				CA4D187F14ED0C9D000118DC /* AppleJam-SRC */,
 				CA341BE11467D4100007160C /* SBJSON */,
 				CA341B861467D15B0007160C /* PlutoLand */,
 				CA8108FE143459B500AADE2C /* LessDJ */,
@@ -424,6 +495,7 @@
 		CA8108F7143459B500AADE2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA09E4E314EBC2BC00C16B85 /* WebKit.framework */,
 				CAC4B1BC146CDB4A0017EA73 /* CoreMedia.framework */,
 				CAD051C5146BD276005E8929 /* AVFoundation.framework */,
 				CA341BDF1467D22F0007160C /* QuartzCore.framework */,
@@ -447,6 +519,7 @@
 		CA8108FE143459B500AADE2C /* LessDJ */ = {
 			isa = PBXGroup;
 			children = (
+				CA09E4DD14EBC26A00C16B85 /* HTML_UI */,
 				CA6F552E14E408CC00A53981 /* AudioStream */,
 				CA276C3414D68B2800F952DC /* AppStore */,
 				CA779C58146FEBE100D085AF /* custom slider */,
@@ -454,12 +527,12 @@
 				CAC4B1DA146D117A0017EA73 /* Element.h */,
 				CAC4B1DB146D117A0017EA73 /* Element.m */,
 				CA81091714345B6D00AADE2C /* DoubanFM_List */,
-				CA81090A143459B500AADE2C /* LessDJAppDelegate.h */,
-				CA81090B143459B500AADE2C /* LessDJAppDelegate.m */,
-				CA6F553714E40B1C00A53981 /* LessDJAppDelegate+Stream.h */,
-				CA6F553814E40B1C00A53981 /* LessDJAppDelegate+Stream.m */,
-				CA647C7414E5267100D0F11C /* LessDJAppDelegate+action.h */,
-				CA647C7514E5267100D0F11C /* LessDJAppDelegate+action.m */,
+				CA81090A143459B500AADE2C /* AppDelegate.h */,
+				CA81090B143459B500AADE2C /* AppDelegate.m */,
+				CA6F553714E40B1C00A53981 /* AppDelegate+Stream.h */,
+				CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */,
+				CA647C7414E5267100D0F11C /* AppDelegate+action.h */,
+				CA647C7514E5267100D0F11C /* AppDelegate+action.m */,
 				CA81090D143459B600AADE2C /* MainMenu.xib */,
 				CA8108FF143459B500AADE2C /* Supporting Files */,
 				CA341C081467E39A0007160C /* PLHttpBlock.h */,
@@ -550,7 +623,7 @@
 		CA8108EB143459B500AADE2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "xu han";
 			};
 			buildConfigurationList = CA8108EE143459B500AADE2C /* Build configuration list for PBXProject "LessDJ" */;
@@ -596,6 +669,9 @@
 				CA276C2814D689D000F952DC /* dsa_pub.pem in Resources */,
 				CA276C2914D689D000F952DC /* vinyltunes.icns in Resources */,
 				CA276C3614D68B5C00F952DC /* MainMenu.xib in Resources */,
+				CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */,
+				CA5BDCD314ED7010008AD4AD /* AppleJamBase.js in Resources */,
+				CA20021714F29772005C4CD4 /* jquery.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +699,7 @@
 				CA779C7B146FF7B000D085AF /* pause.png in Resources */,
 				CA779CA914700CC400D085AF /* dsa_pub.pem in Resources */,
 				CA779CCD1470F0EA00D085AF /* vinyltunes.icns in Resources */,
+				CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA276BF114D689D000F952DC /* main.m in Sources */,
-				CA276BF214D689D000F952DC /* LessDJAppDelegate.m in Sources */,
+				CA276BF214D689D000F952DC /* AppDelegate.m in Sources */,
 				CA276BF314D689D000F952DC /* NSDictionary+NonNull.m in Sources */,
 				CA276BF414D689D000F952DC /* NSDictionary+URL.m in Sources */,
 				CA276BF514D689D000F952DC /* NSString+Addition.m in Sources */,
@@ -662,9 +739,17 @@
 				CA276C0C14D689D000F952DC /* BWTexturedSliderCell.m in Sources */,
 				CA276C0D14D689D000F952DC /* NSVIewBG.m in Sources */,
 				CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */,
-				CA6F553A14E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
-				CA647C7714E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
+				CA6F553A14E40B1C00A53981 /* AppDelegate+Stream.m in Sources */,
+				CA647C7714E5267100D0F11C /* AppDelegate+action.m in Sources */,
 				CA647C7C14E526B600D0F11C /* Settings.m in Sources */,
+				CA09E4E214EBC2A900C16B85 /* WindowController.m in Sources */,
+				CA4D188314ED0CB8000118DC /* AppleJam.m in Sources */,
+				CA4D188614ED16BA000118DC /* AppleJamBase.js in Sources */,
+				CA4D188914ED475B000118DC /* jquery.js in Sources */,
+				CA06D16B14EE9E5D00E31090 /* JamCommand.m in Sources */,
+				CA06D17014EEAA5D00E31090 /* Player.m in Sources */,
+				CA06D17814EEAC0800E31090 /* JSONKit.m in Sources */,
+				CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA810905143459B500AADE2C /* main.m in Sources */,
-				CA81090C143459B500AADE2C /* LessDJAppDelegate.m in Sources */,
+				CA81090C143459B500AADE2C /* AppDelegate.m in Sources */,
 				CA341BC41467D15B0007160C /* NSDictionary+NonNull.m in Sources */,
 				CA341BC51467D15B0007160C /* NSDictionary+URL.m in Sources */,
 				CA341BC61467D15B0007160C /* NSString+Addition.m in Sources */,
@@ -701,9 +786,17 @@
 				CA779C70146FEC4000D085AF /* BWTexturedSliderCell.m in Sources */,
 				CA779C75146FF4BD00D085AF /* NSVIewBG.m in Sources */,
 				CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */,
-				CA6F553914E40B1C00A53981 /* LessDJAppDelegate+Stream.m in Sources */,
-				CA647C7614E5267100D0F11C /* LessDJAppDelegate+action.m in Sources */,
+				CA6F553914E40B1C00A53981 /* AppDelegate+Stream.m in Sources */,
+				CA647C7614E5267100D0F11C /* AppDelegate+action.m in Sources */,
 				CA647C7B14E526B600D0F11C /* Settings.m in Sources */,
+				CA09E4E114EBC2A900C16B85 /* WindowController.m in Sources */,
+				CA4D188214ED0CB8000118DC /* AppleJam.m in Sources */,
+				CA4D188514ED16BA000118DC /* AppleJamBase.js in Sources */,
+				CA4D188814ED475B000118DC /* jquery.js in Sources */,
+				CA06D16A14EE9E5D00E31090 /* JamCommand.m in Sources */,
+				CA06D16F14EEAA5D00E31090 /* Player.m in Sources */,
+				CA06D17714EEAC0800E31090 /* JSONKit.m in Sources */,
+				CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,7 +879,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -805,7 +898,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};

@@ -8,20 +8,20 @@
 
 #import "NSApplication+BridgeSupport.h"
 #import "DBList.h"
-#import "LessDJAppDelegate.h"
+#import "AppDelegate.h"
 
 @implementation NSApplication (BridgeSupport)
 
 //currentSongItem;
 - (DBItem*)currentSongItem
 {
-    LessDJAppDelegate* delegate = (LessDJAppDelegate*)[NSApp delegate];
+    AppDelegate* delegate = (AppDelegate*)[NSApp delegate];
     return delegate.curItem;
 }
 
 - (CGFloat)currentLocation
 {
-    LessDJAppDelegate* delegate = (LessDJAppDelegate*)[NSApp delegate];
+    AppDelegate* delegate = (AppDelegate*)[NSApp delegate];
     return delegate.songLocation;    
 }
 

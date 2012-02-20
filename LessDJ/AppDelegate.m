@@ -6,8 +6,9 @@
 //  Copyright 2011 xu han. All rights reserved.
 //
 
-#import "LessDJAppDelegate.h"
-#import "LessDJAppDelegate+Stream.h"
+#import "AppDelegate.h"
+#import "AppDelegate+Stream.h"
+#import "AppDelegate+action.h"
 
 #import "DBFM.h"
 #import "DBList.h"
@@ -17,7 +18,9 @@
 #import "AudioStreamer.h"
 #import "Settings.h"
 
-@implementation LessDJAppDelegate
+#import "WindowController.h"
+#import "Player.h"
+@implementation AppDelegate
 
 @synthesize labelPosition;
 @synthesize labelTitle;
@@ -77,12 +80,20 @@
     [self addAVPlayerNotifyCallBack];
     [self updateProgressTimerState:YES];
 
+    [self reloadTheme:nil];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
     [window orderFront:nil];
     return YES;
+}
+
+
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename
+{
+    
+    return NO;
 }
 
 
@@ -93,6 +104,9 @@
     [viewChannels setFrameOrigin:CGPointMake(windowSize.width - 80, windowSize.height - 20)];
     [[[window contentView] superview] addSubview:viewChannels];
 }
+
+
+
 #pragma mark - methods
 
 - (void)updateProgressTimerState:(BOOL)isOn
@@ -182,6 +196,8 @@
                                                                  userInfo:nil
                                                        deliverImmediately:YES];
 
+
+    [[Player s] appSongChanged:item];
     
 }
 
@@ -196,6 +212,8 @@
         if(isAVPlayer) [avplayer pause];
         else  [streamer pause];
     }
+
+    [[Player s] appStateChanged:isStatePlaying];
 }
 
 
@@ -222,6 +240,33 @@
         [streamer seekToTime:desireSeconds];
     }
 
+}
+
+- (void)onChangeVolume:(float)value
+{
+    
+}
+- (void)onChangeChannel:(int)channel
+{
+    
+}
+- (void)onChangeProgress:(float)value
+{
+    
+}
+
+- (void)onWindowClose
+{
+    
+}
+- (void)onWindowMinimize
+{
+    
+}
+
+- (void)showChannelList
+{
+    
 }
 
 - (IBAction)onGetLL:(id)sender {
@@ -333,4 +378,8 @@
 }
 
 
++ (AppDelegate*)s
+{
+    return (AppDelegate*)([NSApplication sharedApplication].delegate);
+}
 @end

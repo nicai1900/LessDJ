@@ -145,7 +145,7 @@
 @end
 
 @implementation DBItem
-
+@synthesize dict = _dict;
 - (id)initWithDict:(NSDictionary*)dict
 {
     self = [super init];

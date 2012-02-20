@@ -34,6 +34,30 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.item</string>
+				<string>com.apple.package</string>
+				<string>com.apple.bundle</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>LessDJ Theme</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.xhan.${PRODUCT_NAME:rfc1034identifier}.theme</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://ixhan.com</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>lessdj</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 	<key>OSAScriptingDefinition</key>
 	<string>LessDJ.sdef</string>
 	<key>SUAllowsAutomaticUpdates</key>
@@ -44,5 +68,28 @@
 	<string>http://ixhan.com/app/lessdj/lessdj_appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>lessdj</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>vinyltunes.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>LessDJ Theme</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.xhan.${PRODUCT_NAME:rfc1034identifier}.theme</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<true/>
+		</dict>
+	</array>
 </dict>
 </plist>
