@@ -19,7 +19,7 @@
 - (void)nextTrack;
 - (void)togglePlay;
 - (void)changeVolume:(NSNumber*)volume;
-- (void)changeChannel:(NSNumber*)channel;
+//- (void)changeChannel:(NSNumber*)channel;
 - (void)changeProgress:(NSNumber*)progress;
 - (void)closeWindow;
 - (void)minimizeWindow;

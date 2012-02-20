@@ -18,6 +18,8 @@
 		CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA09E4E314EBC2BC00C16B85 /* WebKit.framework */; };
 		CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
 		CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
+		CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
+		CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
 		CA276BF114D689D000F952DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA810904143459B500AADE2C /* main.m */; };
 		CA276BF214D689D000F952DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* AppDelegate.m */; };
 		CA276BF314D689D000F952DC /* NSDictionary+NonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8A1467D15B0007160C /* NSDictionary+NonNull.m */; };
@@ -173,6 +175,9 @@
 		CA09E4E014EBC2A900C16B85 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowController.m; path = theme/WindowController.m; sourceTree = "<group>"; };
 		CA09E4E314EBC2BC00C16B85 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CA09E4E514EBC2F900C16B85 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WindowController.xib; path = theme/WindowController.xib; sourceTree = "<group>"; };
+		CA20021214F285EE005C4CD4 /* README.mdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
+		CA20021314F28D00005C4CD4 /* ThemeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeInfo.h; path = theme/ThemeInfo.h; sourceTree = "<group>"; };
+		CA20021414F28D00005C4CD4 /* ThemeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeInfo.m; path = theme/ThemeInfo.m; sourceTree = "<group>"; };
 		CA276C2F14D689D000F952DC /* LessDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA276C3514D68B5C00F952DC /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		CA341B881467D15B0007160C /* NSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAdditions.h; sourceTree = "<group>"; };
@@ -318,6 +323,8 @@
 				CA09E4E514EBC2F900C16B85 /* WindowController.xib */,
 				CA06D16D14EEAA5D00E31090 /* Player.h */,
 				CA06D16E14EEAA5D00E31090 /* Player.m */,
+				CA20021314F28D00005C4CD4 /* ThemeInfo.h */,
+				CA20021414F28D00005C4CD4 /* ThemeInfo.m */,
 			);
 			name = HTML_UI;
 			sourceTree = "<group>";
@@ -464,6 +471,7 @@
 		CA8108E9143459B500AADE2C = {
 			isa = PBXGroup;
 			children = (
+				CA20021214F285EE005C4CD4 /* README.mdown */,
 				CA779CCC1470F0EA00D085AF /* vinyltunes.icns */,
 				CA4D187F14ED0C9D000118DC /* AppleJam-SRC */,
 				CA341BE11467D4100007160C /* SBJSON */,
@@ -739,6 +747,7 @@
 				CA06D16B14EE9E5D00E31090 /* JamCommand.m in Sources */,
 				CA06D17014EEAA5D00E31090 /* Player.m in Sources */,
 				CA06D17814EEAC0800E31090 /* JSONKit.m in Sources */,
+				CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +794,7 @@
 				CA06D16A14EE9E5D00E31090 /* JamCommand.m in Sources */,
 				CA06D16F14EEAA5D00E31090 /* Player.m in Sources */,
 				CA06D17714EEAC0800E31090 /* JSONKit.m in Sources */,
+				CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
