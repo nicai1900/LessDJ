@@ -23,6 +23,7 @@
 - (void)changeProgress:(NSNumber*)progress;
 - (void)closeWindow;
 - (void)minimizeWindow;
+- (void)showChannelList;
 
 // app methods
 - (void)appSongChanged:(DBItem*)item;

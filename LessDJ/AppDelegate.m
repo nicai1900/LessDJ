@@ -91,6 +91,13 @@
 }
 
 
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename
+{
+    
+    return NO;
+}
+
+
 - (void)awakeFromNib
 {
     CGSize windowSize = [window frame].size;
@@ -98,6 +105,9 @@
     [viewChannels setFrameOrigin:CGPointMake(windowSize.width - 80, windowSize.height - 20)];
     [[[window contentView] superview] addSubview:viewChannels];
 }
+
+
+
 #pragma mark - methods
 
 - (void)updateProgressTimerState:(BOOL)isOn
@@ -246,6 +256,19 @@
     
 }
 
+- (void)onWindowClose
+{
+    
+}
+- (void)onWindowMinimize
+{
+    
+}
+
+- (void)showChannelList
+{
+    
+}
 
 - (IBAction)onGetLL:(id)sender {
 //#ifdef Appstore    

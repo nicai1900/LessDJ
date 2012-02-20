@@ -89,6 +89,9 @@ typedef enum {
 - (void)onChangeVolume:(float)value;
 - (void)onChangeChannel:(int)channel;
 - (void)onChangeProgress:(float)value;
+- (void)onWindowClose;
+- (void)onWindowMinimize;
+- (void)showChannelList;
 
 - (IBAction)onGetLL:(id)sender;
 - (IBAction)onOrderFront:(id)sender;

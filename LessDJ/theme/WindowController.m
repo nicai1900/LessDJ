@@ -35,7 +35,7 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    NSString*path = @"/Users/less/Desktop/test.bun/index2.html";
+    NSString*path = @"/Users/less/Desktop/test.lessdj/index2.html";
     NSURL* url = [NSURL fileURLWithPath:path];
 
     jam = [[AppleJam alloc] initWithWebView:webView

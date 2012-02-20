@@ -218,14 +218,14 @@
 		CA4D188114ED0CB8000118DC /* AppleJam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleJam.m; sourceTree = "<group>"; };
 		CA4D188414ED16BA000118DC /* AppleJamBase.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AppleJamBase.js; sourceTree = "<group>"; };
 		CA4D188714ED475B000118DC /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		CA647C7414E5267100D0F11C /* AppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "AppDelegate+action.h"; sourceTree = "<group>"; };
+		CA647C7414E5267100D0F11C /* AppDelegate+action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+action.h"; sourceTree = "<group>"; };
 		CA647C7514E5267100D0F11C /* AppDelegate+action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+action.m"; sourceTree = "<group>"; };
 		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CA647C7A14E526B600D0F11C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		CA647CA014E5351300D0F11C /* LessDJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LessDJ.entitlements; path = ../../LessDJ.entitlements; sourceTree = "<group>"; };
 		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
 		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
-		CA6F553714E40B1C00A53981 /* AppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "AppDelegate+Stream.h"; sourceTree = "<group>"; };
+		CA6F553714E40B1C00A53981 /* AppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Stream.h"; sourceTree = "<group>"; };
 		CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Stream.m"; sourceTree = "<group>"; };
 		CA779C47146FDB9C00D085AF /* NSImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSImageCache.h; path = NSImageAddition/NSImageCache.h; sourceTree = "<group>"; };
 		CA779C48146FDB9C00D085AF /* NSImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSImageCache.m; path = NSImageAddition/NSImageCache.m; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		CA810904143459B500AADE2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA810906143459B500AADE2C /* LessDJ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LessDJ-Prefix.pch"; sourceTree = "<group>"; };
 		CA810908143459B500AADE2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CA81090A143459B500AADE2C /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA81090A143459B500AADE2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA81090B143459B500AADE2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA81090E143459B600AADE2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CA81091814345B6D00AADE2C /* douban.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = douban.mdown; sourceTree = "<group>"; };
@@ -614,7 +614,7 @@
 		CA8108EB143459B500AADE2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "xu han";
 			};
 			buildConfigurationList = CA8108EE143459B500AADE2C /* Build configuration list for PBXProject "LessDJ" */;
@@ -867,7 +867,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -886,7 +886,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};

@@ -65,9 +65,14 @@ static Player *_gPlayer;
 }
 - (void)closeWindow
 {
-    
+    [[AppDelegate s] onWindowClose];
 }
 - (void)minimizeWindow
+{
+    [[AppDelegate s] onWindowMinimize];
+}
+
+- (void)showChannelList
 {
     
 }
@@ -82,7 +87,7 @@ static Player *_gPlayer;
 }
 - (void)appArtworkChanged:(NSURL*)url
 {
-    NSString* src = [url absoluteString];
+    NSString* src = url ? [url absoluteString] : @"null";
     NSString* script = [NSString stringWithFormat:@"app_artwork_changed('%@')",src];
     [self runScript:script];
 }
