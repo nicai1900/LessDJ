@@ -9,5 +9,5 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate (action)
-
+- (IBAction)reloadTheme:(id)sender;
 @end

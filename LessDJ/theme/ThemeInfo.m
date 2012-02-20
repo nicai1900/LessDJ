@@ -10,7 +10,7 @@
 
 @implementation ThemeInfo
 
-//@synthesize author, info, name , version ,identify ,authorURL ,themePath ,windowSize ,windowSizeMax, windowHasBorder , windowHasShadow;
+@synthesize author, info, name , version ,identify ,authorURL ,themePath ,windowSize ,windowSizeMax, windowHasBorder , windowHasShadow;
 
 #define _Info(key) PLHashV(dict,key)
 

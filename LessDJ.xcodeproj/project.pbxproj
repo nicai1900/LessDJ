@@ -20,6 +20,7 @@
 		CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
 		CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
 		CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
+		CA20021714F29772005C4CD4 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
 		CA276BF114D689D000F952DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA810904143459B500AADE2C /* main.m */; };
 		CA276BF214D689D000F952DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81090B143459B500AADE2C /* AppDelegate.m */; };
 		CA276BF314D689D000F952DC /* NSDictionary+NonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = CA341B8A1467D15B0007160C /* NSDictionary+NonNull.m */; };
@@ -670,6 +671,7 @@
 				CA276C3614D68B5C00F952DC /* MainMenu.xib in Resources */,
 				CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */,
 				CA5BDCD314ED7010008AD4AD /* AppleJamBase.js in Resources */,
+				CA20021714F29772005C4CD4 /* jquery.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

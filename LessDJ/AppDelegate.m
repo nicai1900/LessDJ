@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Stream.h"
+#import "AppDelegate+action.h"
 
 #import "DBFM.h"
 #import "DBList.h"
@@ -79,9 +80,7 @@
     [self addAVPlayerNotifyCallBack];
     [self updateProgressTimerState:YES];
 
-    windowc = [[WindowController alloc] init];
-    [windowc.window center];
-    [windowc showWindow:nil];
+    [self reloadTheme:nil];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
