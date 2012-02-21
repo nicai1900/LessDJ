@@ -24,7 +24,6 @@
 
     if (!dict) {
         errorMsg = @"can't open info.plist file inside package";        
-        return nil;
     }
     
 
@@ -32,6 +31,11 @@
     info.themePath = path;
     errorMsg = [info infoValid];
     if (errorMsg) {
+        //TODO: error msg handle
+        NSAlert* alert = [NSAlert alertWithError:[NSError errorWithDomain:@"LessDJ.Theme.error"
+                                                                     code:0 
+                                                                 userInfo:@{ NSLocalizedDescriptionKey : errorMsg }]];
+        [alert runModal];
         return nil;
     }
     return info;
@@ -58,26 +62,27 @@
 
 - (NSString*)infoValid
 {
-    NSString* errorMsg;
+    NSString* errorMsg = nil;
     if (![self.identify isNonEmpty]) {
         errorMsg = @"identify";
     }
-//    TODO: parse more
+
+    if (self.windowSize.height <= 0 || self.windowSize.width <= 0 ) {
+        errorMsg = @"window size error";
+    }
     return errorMsg;
 }
 
 
 - (void)dealloc
 {
-    /* TODO:release these
-     NSString *identify;
-     NSString *author,*authorURL;
-     NSString *name, *version, *info;
-     BOOL windowHasBorder, windowHasShadow;  //DragToMove = YES if no Border
-     CGSize windowSize, windowSizeMax;
-     
-     NSString* themePath;
-     */
+    PLSafeRelease(identify);
+    PLSafeRelease(author);
+    PLSafeRelease(authorURL);
+    PLSafeRelease(name);
+    PLSafeRelease(version);
+    PLSafeRelease(info);
+    PLSafeRelease(themePath);
     [super dealloc];
 }
 
