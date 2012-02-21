@@ -20,5 +20,4 @@
 @property(retain,nonatomic) ThemeInfo* info;
 - (id)initWithTheme:(NSString*)path;
 
-- (NSWindow*)bordlessWindow:(CGSize)size;
 @end

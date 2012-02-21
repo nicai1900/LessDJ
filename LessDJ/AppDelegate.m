@@ -80,6 +80,8 @@
     [self addAVPlayerNotifyCallBack];
     [self updateProgressTimerState:YES];
 
+    
+    defaultWindow = window;
     [self reloadTheme:nil];
 }
 

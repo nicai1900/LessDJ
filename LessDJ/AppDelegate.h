@@ -38,7 +38,7 @@ typedef enum {
 
 @class WindowController;
 @interface AppDelegate : NSObject <NSApplicationDelegate, DBFMDelegate> {
-    NSWindow *window;
+    NSWindow *window , *defaultWindow;
     
     DBFM*       fm;
 

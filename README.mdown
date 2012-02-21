@@ -1,17 +1,28 @@
+√* theme test
 
-
-TODO-Lists
+TODO-Lists v1.2 (23)
 ----------
-* theme test
-* theme manager(internal)
-* theme viewer
-* theme preivew
-* theme install
+* move html theme
+* dynamic reload theme support
+* default inner theme
 * media key handler
 * fix volumen issue on 10.6
 * fix duplex sound instance issue on 10.6
 * menu changed
+
+
+TODO-Lists v1.3 (25)
+----------
+* theme manager(internal)
+* theme viewer
+* theme preivew
+* theme install
 * sound freeze issue
+* song changed notification
+
+
+TODO-Lists v1.4 (27)
+----------
 * personal music channel support
 
 
