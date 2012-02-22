@@ -1,3 +1,4 @@
+如果您愿意帮助改进LessDJ, 请发我消息.
 √* theme test
 √* fix volume issue on 10.6                      --> fixed but need test
 √* fix duplex sound instance issue on 10.6       --> fixed but need test
@@ -6,7 +7,7 @@ TODO-Lists v1.2 (23)
 ----------
 * move html theme
 * dynamic reload theme support
-* default inner theme                           
+* default inner theme
 * media key handler
 
 * menu changed
@@ -25,7 +26,6 @@ TODO-Lists v1.3 (25)
 TODO-Lists v1.4 (27)
 ----------
 * personal music channel support
-
 
 
 
