@@ -18,9 +18,11 @@
          removeObserver:self
          name:ASStatusChangedNotification
          object:streamer];
-
-		
-		[streamer stop];
+            
+        [streamer stop];        
+        usleep(1000);
+        [streamer stop];
+        
 		[streamer release];
 		streamer = nil;
 	}

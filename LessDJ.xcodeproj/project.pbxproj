@@ -18,6 +18,8 @@
 		CA09E4E414EBC2BC00C16B85 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA09E4E314EBC2BC00C16B85 /* WebKit.framework */; };
 		CA09E4E614EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
 		CA09E4E714EBC2F900C16B85 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09E4E514EBC2F900C16B85 /* WindowController.xib */; };
+		CA122F3F14F5115E0049FB1B /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA122F3E14F5115E0049FB1B /* AudioStreamer.m */; };
+		CA122F4014F5115E0049FB1B /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA122F3E14F5115E0049FB1B /* AudioStreamer.m */; };
 		CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
 		CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA20021414F28D00005C4CD4 /* ThemeInfo.m */; };
 		CA20021714F29772005C4CD4 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = CA4D188714ED475B000118DC /* jquery.js */; };
@@ -103,8 +105,6 @@
 		CA647C7714E5267100D0F11C /* AppDelegate+action.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7514E5267100D0F11C /* AppDelegate+action.m */; };
 		CA647C7B14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
 		CA647C7C14E526B600D0F11C /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CA647C7A14E526B600D0F11C /* Settings.m */; };
-		CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
-		CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553014E408E800A53981 /* AudioStreamer.m */; };
 		CA6F553914E40B1C00A53981 /* AppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */; };
 		CA6F553A14E40B1C00A53981 /* AppDelegate+Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */; };
 		CA779C49146FDB9C00D085AF /* NSImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CA779C48146FDB9C00D085AF /* NSImageCache.m */; };
@@ -176,6 +176,8 @@
 		CA09E4E014EBC2A900C16B85 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowController.m; path = theme/WindowController.m; sourceTree = "<group>"; };
 		CA09E4E314EBC2BC00C16B85 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CA09E4E514EBC2F900C16B85 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WindowController.xib; path = theme/WindowController.xib; sourceTree = "<group>"; };
+		CA122F3D14F5115E0049FB1B /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = StreamSoundEngine/AudioStreamer.h; sourceTree = "<group>"; };
+		CA122F3E14F5115E0049FB1B /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = StreamSoundEngine/AudioStreamer.m; sourceTree = "<group>"; };
 		CA20021214F285EE005C4CD4 /* README.mdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		CA20021314F28D00005C4CD4 /* ThemeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeInfo.h; path = theme/ThemeInfo.h; sourceTree = "<group>"; };
 		CA20021414F28D00005C4CD4 /* ThemeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeInfo.m; path = theme/ThemeInfo.m; sourceTree = "<group>"; };
@@ -229,8 +231,6 @@
 		CA647C7914E526B600D0F11C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CA647C7A14E526B600D0F11C /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		CA647CA014E5351300D0F11C /* LessDJ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LessDJ.entitlements; path = ../../LessDJ.entitlements; sourceTree = "<group>"; };
-		CA6F552F14E408E800A53981 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = AudioStreamer/Classes/AudioStreamer.h; sourceTree = SOURCE_ROOT; };
-		CA6F553014E408E800A53981 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = AudioStreamer/Classes/AudioStreamer.m; sourceTree = SOURCE_ROOT; };
 		CA6F553714E40B1C00A53981 /* AppDelegate+Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Stream.h"; sourceTree = "<group>"; };
 		CA6F553814E40B1C00A53981 /* AppDelegate+Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Stream.m"; sourceTree = "<group>"; };
 		CA779C47146FDB9C00D085AF /* NSImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSImageCache.h; path = NSImageAddition/NSImageCache.h; sourceTree = "<group>"; };
@@ -427,15 +427,6 @@
 			path = AppleJam/src;
 			sourceTree = SOURCE_ROOT;
 		};
-		CA6F552E14E408CC00A53981 /* AudioStream */ = {
-			isa = PBXGroup;
-			children = (
-				CA6F552F14E408E800A53981 /* AudioStreamer.h */,
-				CA6F553014E408E800A53981 /* AudioStreamer.m */,
-			);
-			name = AudioStream;
-			sourceTree = "<group>";
-		};
 		CA779C45146FDB6900D085AF /* NSImageCache */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,8 +510,9 @@
 		CA8108FE143459B500AADE2C /* LessDJ */ = {
 			isa = PBXGroup;
 			children = (
+				CA122F3D14F5115E0049FB1B /* AudioStreamer.h */,
+				CA122F3E14F5115E0049FB1B /* AudioStreamer.m */,
 				CA09E4DD14EBC26A00C16B85 /* HTML_UI */,
-				CA6F552E14E408CC00A53981 /* AudioStream */,
 				CA276C3414D68B2800F952DC /* AppStore */,
 				CA779C58146FEBE100D085AF /* custom slider */,
 				CA779C45146FDB6900D085AF /* NSImageCache */,
@@ -738,7 +730,6 @@
 				CA276C0B14D689D000F952DC /* BWTexturedSlider.m in Sources */,
 				CA276C0C14D689D000F952DC /* BWTexturedSliderCell.m in Sources */,
 				CA276C0D14D689D000F952DC /* NSVIewBG.m in Sources */,
-				CA6F553214E408E800A53981 /* AudioStreamer.m in Sources */,
 				CA6F553A14E40B1C00A53981 /* AppDelegate+Stream.m in Sources */,
 				CA647C7714E5267100D0F11C /* AppDelegate+action.m in Sources */,
 				CA647C7C14E526B600D0F11C /* Settings.m in Sources */,
@@ -750,6 +741,7 @@
 				CA06D17014EEAA5D00E31090 /* Player.m in Sources */,
 				CA06D17814EEAC0800E31090 /* JSONKit.m in Sources */,
 				CA20021614F28D00005C4CD4 /* ThemeInfo.m in Sources */,
+				CA122F4014F5115E0049FB1B /* AudioStreamer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,7 +777,6 @@
 				CA779C6F146FEC4000D085AF /* BWTexturedSlider.m in Sources */,
 				CA779C70146FEC4000D085AF /* BWTexturedSliderCell.m in Sources */,
 				CA779C75146FF4BD00D085AF /* NSVIewBG.m in Sources */,
-				CA6F553114E408E800A53981 /* AudioStreamer.m in Sources */,
 				CA6F553914E40B1C00A53981 /* AppDelegate+Stream.m in Sources */,
 				CA647C7614E5267100D0F11C /* AppDelegate+action.m in Sources */,
 				CA647C7B14E526B600D0F11C /* Settings.m in Sources */,
@@ -797,6 +788,7 @@
 				CA06D16F14EEAA5D00E31090 /* Player.m in Sources */,
 				CA06D17714EEAC0800E31090 /* JSONKit.m in Sources */,
 				CA20021514F28D00005C4CD4 /* ThemeInfo.m in Sources */,
+				CA122F3F14F5115E0049FB1B /* AudioStreamer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

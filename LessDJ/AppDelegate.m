@@ -68,8 +68,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
-    isAVPlayer = NSClassFromString(@"AVPlayer") != nil; 
-//    isAVPlayer = NO;
+//    isAVPlayer = NSClassFromString(@"AVPlayer") != nil; 
+    isAVPlayer = NO;
     self.fm = [[[DBFM alloc] init] autorelease];
     fm.delegate = self;
     delayOperation = OperationNext;

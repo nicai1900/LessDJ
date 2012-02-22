@@ -4,10 +4,10 @@ TODO-Lists v1.2 (23)
 ----------
 * move html theme
 * dynamic reload theme support
-* default inner theme
+* default inner theme                           
 * media key handler
-* fix volumen issue on 10.6
-* fix duplex sound instance issue on 10.6
+* fix volume issue on 10.6                      --> fixed but need test
+* fix duplex sound instance issue on 10.6       --> fixed but need test
 * menu changed
 
 
